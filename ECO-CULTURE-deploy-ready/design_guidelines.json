@@ -1,0 +1,90 @@
+{
+  "theme": "light",
+  "archetype": "1 (Organic & Earthy)",
+  "aesthetic": "Moderno Minimalista",
+  "design_philosophy": "ECO-CULTURE bridges urban living with natural organic farming. The design must be uncluttered, emphasizing negative space. Use generous padding (p-8, p-12). Images of fresh produce should serve as the primary color source alongside our brand's Deep Forest Green. Use clean, solid cards without heavy drop shadows to create a high-end, trustworthy feel.",
+  "colors": {
+    "background": "#FAF9F6",
+    "foreground": "#1F2937",
+    "primary": "#166534",
+    "primary_foreground": "#FFFFFF",
+    "secondary": "#F1F5F9",
+    "secondary_foreground": "#1E293B",
+    "accent": "#EA580C",
+    "accent_foreground": "#FFFFFF",
+    "muted": "#F3F4F6",
+    "muted_foreground": "#6B7280",
+    "border": "#E5E7EB",
+    "card": "#FFFFFF",
+    "card_foreground": "#1F2937",
+    "success": "#22C55E",
+    "warning": "#F59E0B"
+  },
+  "typography": {
+    "font_family": {
+      "heading": "Outfit, sans-serif",
+      "body": "Manrope, sans-serif"
+    },
+    "scale": {
+      "h1": "text-5xl md:text-6xl tracking-tight leading-none",
+      "h2": "text-3xl md:text-4xl tracking-tight",
+      "h3": "text-2xl",
+      "body": "text-base leading-relaxed",
+      "small": "text-sm text-muted-foreground",
+      "overline": "text-xs tracking-[0.2em] uppercase font-semibold text-primary"
+    }
+  },
+  "layout_and_spacing": {
+    "philosophy": "Generous spacing. Allow content to breathe. Use a mix of The Tetris Grid (asymmetrical bento) for marketing and The Control Room Grid for the client dashboard.",
+    "container_padding": "px-6 md:px-12 lg:px-24",
+    "section_gap": "py-24",
+    "grid_gap": "gap-8 md:gap-12",
+    "radius": "rounded-2xl"
+  },
+  "components": {
+    "cards": {
+      "style": "Flat solid surfaces with subtle 1px border. No drop shadows. For product cards, use rounded-2xl with overflow-hidden and absolute positioning for tags.",
+      "hover_state": "-translate-y-1 transition-transform duration-300 shadow-lg border-primary/20"
+    },
+    "buttons": {
+      "primary": "bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 py-3 font-medium transition-all",
+      "secondary": "bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-full px-8 py-3 transition-all",
+      "outline": "border-2 border-primary text-primary hover:bg-primary/10 rounded-full px-8 py-3 transition-all"
+    },
+    "inputs": {
+      "style": "bg-transparent border-b-2 border-border focus:border-primary rounded-none px-0 py-3 transition-colors outline-none",
+      "label": "text-sm font-medium text-muted-foreground mb-1 block"
+    },
+    "navigation": {
+      "style": "Sticky header with crystal glassmorphism (backdrop-blur-xl bg-background/80 border-b border-border/40). Minimal links, prominent cart icon."
+    }
+  },
+  "interactions": {
+    "hover": "Subtle scale up on images (1.05), primary color text highlights on links.",
+    "loading": "Smooth fade-ins, minimalist skeleton loaders matching the bento grid shape.",
+    "transitions": "transition-all duration-300 ease-in-out"
+  },
+  "media": {
+    "logo": "https://customer-assets.emergentagent.com/job_eco-culture/artifacts/firkcoif_LOGOTIPO.png",
+    "hero_banner": "https://static.prod-images.emergentagent.com/jobs/b742545c-242c-4342-8b77-a0e69e3cbf92/images/d220ccc8de6ddc9e254885b7f8ba310a13aac9951a969afb9ccbb2198ca4c228.png",
+    "seasonal_basket": "https://static.prod-images.emergentagent.com/jobs/b742545c-242c-4342-8b77-a0e69e3cbf92/images/be19d7eaf066b18e07c61105ab54ad8b23d8bd853cd5a2f8735e53c65ec13638.png",
+    "products": [
+      "https://images.unsplash.com/photo-1573246123716-6b1782bfc499?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzN8MHwxfHNlYXJjaHwzfHxvcmdhbmljJTIwZnJlc2glMjB2ZWdldGFibGVzJTIwZmxhdGxheXxlbnwwfHx8fDE3NzgyNDc2MjR8MA&ixlib=rb-4.1.0&q=85",
+      "https://images.pexels.com/photos/5033529/pexels-photo-5033529.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    ],
+    "urban_garden": [
+      "https://images.unsplash.com/photo-1759692071961-f71efda3691f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzR8MHwxfHNlYXJjaHwxfHx1cmJhbiUyMGNvbW11bml0eSUyMGdhcmRlbnxlbnwwfHx8fDE3NzgyNDc2MjR8MA&ixlib=rb-4.1.0&q=85"
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Setup Google Fonts 'Outfit' for headings and 'Manrope' for body text.",
+    "Use Shadcn UI components for complex interactions (Dropdowns, Tabs for B2C/B2B login, Dialogs) but heavily customize them to remove the default tech look by adhering to the 'components' guidelines.",
+    "Use 'lucide-react' for crisp, minimalist line icons.",
+    "Ensure all copy is in Spanish as requested.",
+    "Implement a unified Client Dashboard layout using 'The Control Room Grid' pattern.",
+    "For the e-commerce catalog, use large imagery and clear whitespace. Price and 'Add to Cart' should be immediately accessible.",
+    "All interactive elements must include 'data-testid' for robust testing.",
+    "For the Urban Garden community registration feature, utilize a clean, multi-step Shadcn form.",
+    "Maintain the light, earthy, bone-white background (#FAF9F6) to make the green produce pop."
+  ]
+}
