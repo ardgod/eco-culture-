@@ -1,3 +1,4 @@
+import React, { Suspense } from "react"; // 1. Añadimos React y Suspense aquí
 import "@/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "sonner";
@@ -25,19 +26,26 @@ function App() {
           <CartProvider>
             <Navbar />
             <main className="flex-1">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/catalogo" element={<Catalog />} />
-                <Route path="/cestas" element={<Baskets />} />
-                <Route path="/formacion" element={<Courses />} />
-                <Route path="/huertos" element={<UrbanGardens />} />
-                <Route path="/carrito" element={<Cart />} />
-                <Route path="/checkout" element={<Checkout />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/registro" element={<Register />} />
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/pedido/:id" element={<OrderSuccess />} />
-              </Routes>
+              {/* 2. Envolvemos las rutas con Suspense. Mientras cargan, mostrará el mensaje de "Cargando..." */}
+              <Suspense fallback={
+                <div className="flex h-full w-full items-center justify-center min-h-[50vh]">
+                  <p className="text-muted-foreground animate-pulse">Cargando Eco-Culture...</p>
+                </div>
+              }>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/catalogo" element={<Catalog />} />
+                  <Route path="/cestas" element={<Baskets />} />
+                  <Route path="/formacion" element={<Courses />} />
+                  <Route path="/huertos" element={<UrbanGardens />} />
+                  <Route path="/carrito" element={<Cart />} />
+                  <Route path="/checkout" element={<Checkout />} />
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/registro" element={<Register />} />
+                  <Route path="/dashboard" element={<Dashboard />} />
+                  <Route path="/pedido/:id" element={<OrderSuccess />} />
+                </Routes>
+              </Suspense>
             </main>
             <Footer />
             <Toaster position="top-right" richColors />
@@ -49,3 +57,4 @@ function App() {
 }
 
 export default App;
+   
