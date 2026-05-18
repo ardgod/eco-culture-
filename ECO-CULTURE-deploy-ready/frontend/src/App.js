@@ -24,10 +24,11 @@ function App() {
       <BrowserRouter>
         <AuthProvider>
           <CartProvider>
+      <Suspense fallback={
             <Navbar />
             <main className="flex-1">
               {/* 2. Envolvemos las rutas con Suspense. Mientras cargan, mostrará el mensaje de "Cargando..." */}
-              <Suspense fallback={
+            
                 <div className="flex h-full w-full items-center justify-center min-h-[50vh]">
                   <p className="text-muted-foreground animate-pulse">Cargando Eco-Culture...</p>
                 </div>
