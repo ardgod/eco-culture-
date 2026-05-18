@@ -24,8 +24,7 @@ function App() {
       <BrowserRouter>
         <AuthProvider>
           <CartProvider>
-      <Suspense fallback={
-            <Navbar />
+            <Navbar /Suspense fallback={
             <main className="flex-1">
               {/* 2. Envolvemos las rutas con Suspense. Mientras cargan, mostrará el mensaje de "Cargando..." */}
             
